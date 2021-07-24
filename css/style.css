@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #1b1c1e;
+    background-color: ivory;
+}
+a:hover{
+    text-decoration: none;
+}
+.container-fluid{
+    margin: 0;
+    padding: 0;
+}
+/* Navbar */
+nav{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    padding: 30px 200px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    z-index: 10000000;
+    transition: 500ms ease;
+}
+.logo{
+    font-size: 34px;
+    color: ivory;
+}
+.logo:hover{
+    color: ivory;
+}
+.logo span{
+    color: crimson;
+}
+.nav-menu{
+    position: absolute;
+    right: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: 500ms ease;
+}
+.nav-menu li{
+    display: inline-block;
+    margin-left: 25px;
+    font-size: 17px;
+}
+.nav-menu li a{
+    color: ivory;
+    transition: all 0.3s;
+}
+.nav-menu li a:hover{
+    transition: 0.3s ease-in-out;
+    color: crimson;
+    letter-spacing: 1px;
+}
+.scrolled{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    z-index: 10000000;
+    background-color: peachpuff;
+    padding: 6px 120px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+}
+.scrolled .nav-menu{
+    right: 120px;
+}
+.scrolled .nav-menu li a{
+    color: #1b1c1e;
+    transition: all 0.3s;
+}
+.scrolled .nav-menu li a:hover{
+    transition: 0.3s ease-in-out;
+    color: crimson;
+    letter-spacing: 1px;
+}
+.scrolled .logo{
+    font-size: 34px;
+    color: #1b1c1e;
+}
+.scrolled .logo:hover{
+    color: #1b1c1e;
+}
+.hamburger-menu{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 101;
+    position: absolute;
+    display: none;
+    align-items: center;
+    right: 35px;
+    top: 37px;
+}
+
+.hamburger{
+    position: relative;
+}
+
+.hamburger, .hamburger::before, .hamburger::after{
+    width: 30px;
+    height: 3px;
+    border-radius: 0.5rem;
+    background-color: ivory;
+    transition: 0.4s;
+}
+.scrolled .hamburger, .scrolled .hamburger::before, .scrolled .hamburger::after{
+    background-color: #1b1c1e;
+}
+
+.hamburger::before,
+.hamburger::after{
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before{
+    top: -10px;
+}
+
+.hamburger::after{
+    bottom: -10px;
+}
+
+.hamburger-menu.responsive .hamburger{
+    background-color: transparent;
+}
+
+.hamburger-menu.responsive .hamburger::before{
+    transform-origin: top left;
+    transform: rotate(45deg);
+    left: 6px;
+}
+
+.hamburger-menu.responsive .hamburger::after{
+    transform-origin: bottom left;
+    transform: rotate(-45deg);
+    left: 6px;
+}
+/* Banner */
+.banner-img{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../images/hero-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-img::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.banner-details{
+    position: relative;
+    width: 60%;
+    height: auto;
+    text-align: center;
+    color: ivory;
+}
+.banner-heading{
+    font-size: 70px;
+    font-weight: 900;
+}
+.banner-body{
+    display: block;
+    font-size: 14px;
+}
+.banner-button, .menu-button{
+    display: block;
+    color: ivory;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    margin: 35px auto 0px auto;
+    padding: 6px 30px;
+    background-color: crimson;
+    width: fit-content;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+.banner-button:hover, .menu-button:hover{
+    transition: 0.3s ease-in-out;
+    color: ivory;
+    letter-spacing: 3px;
+}
+/* About */
+.about{
+    position: relative;
+    padding: 80px 100px 20px 100px;
+    width: 100%;
+}
+.about-heading, .menu-heading, .chefs-heading, .testimonial-heading, .contact-heading{
+    font-size: 30px;
+    line-height: 27px;
+}
+.about-heading{
+    margin-top: 20px;
+}
+.about-heading span, .menu-heading span, .chefs-heading span, .testimonial-heading span, .contact-heading span{
+    color: crimson;
+    font-size: 48px;
+}
+.para1, .para2, .menu-body, .chefs-body, .testimonial-body, .contact-body{
+    display: block;
+    font-size: 14px;
+}
+.para2{
+    margin-top: 20px;
+}
+.about-img{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.about-img img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.menu{
+    position: relative;
+    width: 100%;
+    padding: 40px 30px 20px 30px;
+    text-align: center;
+}
+.menus{
+    margin-top: 20px;
+}
+.menu-card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 5px 35px -6px rgba(0, 0, 0, 0.3);
+}
+.menu-card img{
+    width: 93%;
+    height: 80%;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13px;
+}
+.menu-name, .testimonial-name, .form-heading{
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 17px;
+}
+.menus .col-md-4{
+    margin: 20px 0px;
+    height: 370px;
+}
+/* Chefs */
+.chefs{
+    position: relative;
+    width: 100%;
+    padding: 50px 50px 20px 50px;
+    text-align: center;
+}
+.chefs .row, .testimonial .row, .contact .row{
+    margin-top: 50px;
+}
+.chefs .row .col-md-3 img{
+    position: relative;
+    width: 250px;
+    height: 280px;
+    object-fit: cover;
+}
+.chef-name{
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 17px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Testimonial */
+.testimonial, .contact{
+    position: relative;
+    background-image: url('../images/testimonial.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: auto;
+    margin-top: 50px;
+    padding: 40px 0px;
+    text-align: center;
+}
+.testimonial::before, .contact::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.testimonial-details{
+    background-color: ivory;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: relative;
+    padding: 30px;
+}
+.testimonial-details img{
+    width: 80px;
+    height: 83px;
+    border-radius: 50%;
+}
+.testimonial-details p{
+    margin-top: 15px;
+    font-style: italic;
+    font-size: 15px;
+}
+.testimonial-heading, .testimonial-body{
+    color: ivory;
+    position: relative;
+}
+/* contact */
+.contact{
+    background-image: url('../images/contact.jpg');
+    background-attachment: fixed;
+}
+.contact-heading, .contact-body{
+    position: relative;
+}
+.form{
+    text-align: left;
+    background-color: ivory;
+    box-shadow: 2px 5px 35px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: auto;
+    padding: 60px 35px;
+    border-radius: 20px;
+}
+.form-heading{
+    font-size: 20px;
+}
+form{
+    margin-top: 20px;
+}
+.form-control{
+    border: 1px solid #1b1c1e;
+    border-radius: 10px;
+    background-color: ivory;
+}
+.btn{
+    background-color: crimson;
+    border-radius: 10px;
+    color: ivory;
+    padding: 6px 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+.btn:hover{
+    transition: 0.3s ease-in-out;
+    letter-spacing: 3px;
+    color: ivory;
+}
+.footer{
+    background-color: peachpuff;
+    text-align: center;
+    height: auto;
+    font-size: 16px;
+    padding: 15px 0px;
+}
+.footer a{
+    color: crimson;
+    text-decoration: none;
+}
+.footer a:hover{
+    color: crimson;
+}
+.topButton{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 20px;
+    background-color: crimson;
+    color: ivory;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+@media screen and (max-width: 600px){
+    nav, .scrolled{
+        padding: 15px 30px;
+        display: block;
+    }
+    .hamburger-menu{
+        display: inline-block;
+    }
+    .logo, .scrolled .logo{
+        font-size: 30px;
+    }
+    .scrolled .icon{
+        color: #1b1c1e;
+    }
+    .icon:hover{
+        color: ivory;
+    }
+    .scrolled .icon:hover{
+        color: #1b1c1e;
+    }
+    .nav-menu, .scrolled .nav-menu{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: ivory;
+        width: auto;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+        padding: 30px 50px;
+        transition: 0.3s ease-in-out;
+    }
+    .scrolled .nav-menu{
+        background-color: #1b1c1e;
+    }
+    .nav-menu li, .scrolled .nav-menu li{
+        margin: 30px 60px;
+        display: block;
+    }
+    .nav-menu li a{
+        color: #1b1c1e;
+    }
+    .scrolled .nav-menu li a{
+        color: ivory;
+    }
+    .nav-menu.responsive, .scrolled .nav-menu.responsive{
+        right: 0;
+    }
+    .banner-details{
+        width: 90%;
+    }
+    .banner-heading{
+        font-size: 50px;
+    }
+    .about, .menu, .testimonial{
+        padding: 40px 50px;
+    }
+    .about .col-md-6:last-child{
+        margin-top: 30px;
+    }
+    .chefs .col-md-3:not(:last-child), .testimonial .col-md-4:not(:last-child){
+        margin-bottom: 30px;
+    }
+    .footer{
+        padding: 15px 50px;
+    }
+}
